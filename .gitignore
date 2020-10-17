@@ -1,0 +1,10 @@
+.idea
+.classpath
+.project
+.settings
+.springBeans
+.factorypath
+.gradle
+target/
+build/
+*.iml
