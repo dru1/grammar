@@ -1,7 +1,8 @@
-/**
- * Grammatik für Zahlen
- */
 grammar Numbers;
+
+@header {
+package at.dru.grammar;
+}
 
 // Non-Terminal
 

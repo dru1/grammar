@@ -1,9 +1,8 @@
-/**
- * Grammatik für Gruppen von Zahlen
- */
 grammar Groups;
 
-import Numbers;
+@header {
+package at.dru.grammar;
+}
 
 // Non-Terminal
 
@@ -19,6 +18,10 @@ integerRangeTerm  : WILDCARD | integer ;
 
 boostTerm         : BOOST decimal ;
 
+decimal	          : SIGN? DIGITS decimalSuffix? ;
+decimalSuffix     : DOT DIGITS ;
+integer           : SIGN? DIGITS ;
+
 // Terminal
 
 BOOST              : '^' ;
@@ -29,3 +32,6 @@ RANGE_END          : ']' ;
 RANGE_TO           : 'TO' ;
 WILDCARD           : '*' ;
 SPACES             : ' '+ ;
+SIGN	           : '-'|'+' ;
+DIGITS             : [0-9]+;
+DOT	               : '.'  ;

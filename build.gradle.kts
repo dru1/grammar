@@ -1,6 +1,6 @@
 plugins {
     java
-//    antlr
+    antlr
 }
 
 group = "at.dru.grammar"
@@ -12,8 +12,7 @@ repositories {
 
 dependencies {
     // Plugin ANTLR version 4
-//    antlr("org.antlr:antlr4:4.8-1")
-    implementation("org.antlr:antlr4-runtime:4.8-1")
+    antlr("org.antlr:antlr4:4.8-1")
 
     // Logging
     implementation("org.slf4j:slf4j-api:1.7.25")
@@ -26,4 +25,9 @@ dependencies {
 
     // Tests
     testImplementation("junit:junit:4.12")
+}
+
+tasks.generateGrammarSource {
+    maxHeapSize = "64m"
+    arguments = arguments + listOf("-visitor", "-long-messages")
 }

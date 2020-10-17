@@ -1,7 +1,7 @@
 package at.dru.grammar.tester;
 
-import at.dru.grammar.gen.numbers.NumbersLexer;
-import at.dru.grammar.gen.numbers.NumbersParser;
+import at.dru.grammar.NumbersLexer;
+import at.dru.grammar.NumbersParser;
 import org.antlr.v4.runtime.BailErrorStrategy;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
