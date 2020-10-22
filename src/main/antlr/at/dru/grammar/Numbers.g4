@@ -6,12 +6,11 @@ package at.dru.grammar;
 
 // Non-Terminal
 
-decimal	       : SIGN? DIGITS decimalSuffix? ;
-decimalSuffix  : DOT DIGITS ;
+decimal	       : SIGN? DIGITS (DOT DIGITS)? ;
 integer        : SIGN? DIGITS ;
 
 // Terminal
 
-SIGN	       : '-'|'+' ;
+SIGN	       : [-+] ;
 DIGITS         : [0-9]+;
 DOT	           : '.'  ;
